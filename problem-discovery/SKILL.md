@@ -102,6 +102,8 @@ Show the Problem Summary + ACs to the user and confirm before proceeding. This i
 
 Scan the codebase in two passes: first find where the problem lives, then trace what moves when you touch it. Do this autonomously — don't ask the user where to look.
 
+**Declare scan scope first.** Before reading anything, state the directories you will scan and those you will treat as out of scope — then stay inside that boundary. Reading files outside the relevant area is the most common source of rejected actions. If the blast-radius trace genuinely needs to cross into an out-of-scope area, say so and confirm before reading it.
+
 ### Pass A: Locate
 
 1. **Map the structure** — Glob the relevant directory areas to understand layout.

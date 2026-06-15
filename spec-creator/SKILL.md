@@ -12,6 +12,16 @@ Produces a single, complete specification document for anything the user wants t
 
 ---
 
+## Entry gate — scope contract
+
+If the user's invocation or approval is vague or short (≤ 5 words — "spec it", "go ahead", "yes", "do it"), do NOT start writing. Echo back a one-line contract and wait for confirmation:
+
+> → Contract: I'll spec [what] covering [scope], saved to /specs/[slug].md (+ companion HTML). Confirm or adjust.
+
+Bypass only when the user gives an explicit, scoped instruction (names what to spec and its scope). This is the cheapest guard against the most expensive failure mode — building a complete artifact for the wrong problem. The full upfront Q&A (Rule 1) still runs after the contract is confirmed.
+
+---
+
 ## Behaviour rules
 
 **Rule 1 — Ask first, write never.**

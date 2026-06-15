@@ -28,6 +28,22 @@ approved. If the plan is rejected, it is revised here — not in the code.
 
 ---
 
+## Entry gates
+
+**Gate 1 — Scope contract.** If the user's invocation or approval is vague or short (≤ 5 words — "plan it", "go ahead", "yes"), do NOT start. Echo a one-line contract and wait:
+
+> → Contract: I'll plan [feature] from [PRD / stories], producing a phased plan for approval. Confirm or adjust.
+
+Bypass only on an explicit, scoped instruction.
+
+**Gate 2 — First-approach checkpoint.** The plan encodes the architecture — so before fleshing out every phase, state the core approach in ≤ 2 lines and confirm it:
+
+> Approach: [architecture / pattern, which modules, build sequence].
+
+This catches a wrong architectural framing in 10 seconds instead of after a full plan is written. After one rejection, propose a fundamentally different approach; after two, ask the user how they would structure it. A rejected approach is dead for the session.
+
+---
+
 ## Behaviour rules
 
 **Rule 1 — Inputs before output.**

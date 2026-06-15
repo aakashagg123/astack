@@ -2,7 +2,7 @@
 name: astack
 description: >
   astack — the routing hub across all custom skills.
-  Domains: software engineering pipelines, research, AI, and document generation.
+  Domains: software engineering pipelines, growth / go-to-market pipelines, research, AI, and document generation.
   Invoke /astack <task-description> to route to the right skill, or
   /astack list to see the full skill map by domain.
   Use /astack when unsure which skill applies, or when starting a new initiative
@@ -43,6 +43,15 @@ You are a skill router. When invoked, identify the domain and task type from the
 | `/context-sync` | Close a dev cycle; update CLAUDE.md with learnings |
 | `/meta-learn` | Meta-learning synthesis across sessions or domains |
 
+### Growth / GTM Pipeline
+
+| Skill | When to invoke |
+|---|---|
+| `/growth-discovery` | Map the marketing lay of the land — martech, budget, personas, scale, channel — before any brief. Mandatory when audience, channel, or objective is open |
+| `/marketing-brief` | Turn a strategy map into a rock-solid, analytics-grounded brief with measurable KPIs — the campaign contract |
+| `/campaign-insights` | Improve a brief with data — ingest campaign / WhatsApp / web analytics, return a prioritised Brief Delta |
+| `/marketing-automation-builder` | Turn an approved brief into an executable journey rendered as a beautified HTML workflow with KPIs wired in |
+
 ### Skill Stack Management
 
 | Skill | When to invoke |
@@ -76,6 +85,8 @@ You are a skill router. When invoked, identify the domain and task type from the
 ## Routing Rules
 
 1. **Engineering pipeline routing.** Full end-to-end feature → `/10x-ai-engineer`. Single-file / known root cause → direct implementation.
+
+2. **Growth pipeline routing.** Strategy / audience / channel still open → `/growth-discovery` first. Have a strategy, need the brief → `/marketing-brief`. Have past performance data → `/campaign-insights`. Have an approved brief, need the journey → `/marketing-automation-builder`. The arc mirrors the build pipeline: discover → contract → data → artifact.
 
 3. **Research routing.** Structured data → `/data-analysis`. Codebase search → `/advanced-search`.
 

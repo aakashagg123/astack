@@ -6,13 +6,13 @@
 
 Most AI-assisted development fails the same way. Not because the code is wrong — because the *problem* was wrong. The spec was vague. The requirements weren't testable. The implementation plan ignored what was already in the codebase. The PR shipped the right syntax but the wrong behaviour.
 
-astack is a set of Claude Code slash commands that close those gaps. It covers the full build cycle — from structured problem discovery through spec writing, test-driven implementation, security review, and cycle closure. Each skill is a focused tool. The `/astack` router dispatches any task to the right one automatically.
+astack is a set of Claude Code slash commands that close those gaps. It covers the full build cycle — from structured problem discovery through spec writing, test-driven implementation, security review, and cycle closure. And it extends the same discipline to the product-to-market arc: a growth pipeline for product managers and product marketers that runs discovery → brief → data-led refinement → automation workflow, so campaigns ship on evidence, not intuition. Each skill is a focused tool. The `/astack` router dispatches any task to the right one automatically.
 
 ---
 
 ## What you get
 
-**28 slash commands across 5 domains.**
+**32 slash commands across 6 domains.**
 
 ### Product pipeline
 
@@ -37,6 +37,15 @@ astack is a set of Claude Code slash commands that close those gaps. It covers t
 | `/pr-review` | Reviews code against the original spec and acceptance criteria — not just style |
 | `/context-sync` | Closes a dev cycle and updates the project's working memory with learnings |
 | `/meta-learn` | Synthesises patterns and learnings across multiple sessions or projects |
+
+### Growth / GTM pipeline
+
+| Skill | What it does |
+| --- | --- |
+| `/growth-discovery` | Maps the marketing lay of the land — martech, budget, personas, scale, channel — before any brief |
+| `/marketing-brief` | Turns a strategy into a rock-solid, analytics-grounded brief with measurable KPIs — the campaign contract |
+| `/campaign-insights` | Improves a brief with data — ingests campaign, WhatsApp, and web analytics into a prioritised Brief Delta |
+| `/marketing-automation-builder` | Turns an approved brief into an executable journey — a beautified HTML workflow with KPIs wired in |
 
 ### Skill stack management
 
@@ -81,7 +90,7 @@ Open Claude Code and run:
 git clone https://github.com/aakashagg123/astack.git ~/.claude/skills/astack
 ```
 
-All 28 slash commands are immediately available. No setup script. No config file. No dependencies.
+All 32 slash commands are immediately available. No setup script. No config file. No dependencies.
 
 ### Add to your project
 
@@ -101,6 +110,8 @@ Commit `.claude/skills/astack/` to your repo. Anyone who clones the repo gets th
 /preflight                → validate your environment before a complex task
 /10x-ai-engineer          → full end-to-end feature build
 /pr-review                → review a PR against requirements, not just lint
+/growth-discovery         → map the marketing lay of the land before any campaign brief
+/marketing-automation-builder → turn an approved brief into a beautified HTML journey
 ```
 
 ---

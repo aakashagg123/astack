@@ -1,0 +1,12 @@
+# astack — repository gitignore
+
+# credential file — must never be committed or pushed
+.git-credentials
+
+# autoresearch scratch — eval byproducts (also covered by global excludesfile)
+autoresearch-*
+**/autoresearch-*/
+*.baseline
+
+# OS noise
+.DS_Store
