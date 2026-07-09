@@ -14,6 +14,12 @@
 
 **Cycle closure is not optional.** `/context-sync` closes every dev cycle by updating the project's working memory with what was learned. Patterns that worked, gotchas to avoid, decisions made. The next session starts from a richer context, not from scratch.
 
+**Root cause before patch.** When something breaks, `/debug-triage` stops the line: reproduce, localize, reduce, fix the cause, guard against recurrence. Making the error disappear is not the goal — understanding why it existed is. A fix you can't explain is a coincidence.
+
+**Evidence over recall, runtime over reading.** `/source-driven-dev` verifies framework and library usage against official docs for the version actually installed — memory of an API is a snapshot that started aging the day it was taken. `/browser-testing` holds the same line for UI: a change verified only by reading the diff is unverified. And `/perf-optimization` refuses any speed claim without a before/after number.
+
+**Shipping should be boring.** `/ship-launch` gates every release on three properties: verified before exposure, observable during exposure, reversible at every stage. `/observability` makes systems diagnosable before the incident, not after. `/git-workflow` keeps the history a readable record of why. Excitement at deploy time is a process failure.
+
 ## Growth is a build cycle too
 
 The same discipline that prevents building the wrong feature prevents shipping the wrong campaign. astack's growth pipeline applies the build ethos to the product-to-market arc — for the product managers and product marketers who own what happens *after* the feature ships.
@@ -38,6 +44,6 @@ The same discipline that prevents building the wrong feature prevents shipping t
 
 ## Where astack fits
 
-astack covers the front half of two cycles. In the **build cycle**: problem discovery, spec writing, story decomposition, architecture planning — what gets built before any implementation begins. In the **growth cycle**: strategy mapping, brief writing, data-led refinement, and journey design — what gets shipped to market before any send goes out.
+astack now spans two full cycles. The **build cycle** runs end to end: problem discovery, spec writing, story decomposition, architecture planning on the front half — then sliced implementation, root-cause debugging, runtime verification, review, and staged shipping on the back half. The **growth cycle** covers strategy mapping, brief writing, data-led refinement, and journey design — what gets shipped to market before any send goes out.
 
 Pair it with whatever execution layer you already use — code agents and your own harness on the build side, your martech and automation platforms on the growth side. astack is designed to hand off cleanly into any of them.

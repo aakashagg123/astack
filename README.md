@@ -6,13 +6,13 @@
 
 Most AI-assisted development fails the same way. Not because the code is wrong — because the *problem* was wrong. The spec was vague. The requirements weren't testable. The implementation plan ignored what was already in the codebase. The PR shipped the right syntax but the wrong behaviour.
 
-astack is a set of Claude Code slash commands that close those gaps. It covers the full build cycle — from structured problem discovery through spec writing, test-driven implementation, security review, and cycle closure. And it extends the same discipline to the product-to-market arc: a growth pipeline for product managers and product marketers that runs discovery → brief → data-led refinement → automation workflow, so campaigns ship on evidence, not intuition. Each skill is a focused tool. The `/astack` router dispatches any task to the right one automatically.
+astack is a set of Claude Code slash commands that close those gaps. It covers the full build cycle — from structured problem discovery through spec writing, test-driven implementation, debugging, security review, staged shipping, and cycle closure. And it extends the same discipline to the product-to-market arc: a growth pipeline for product managers and product marketers that runs discovery → brief → data-led refinement → automation workflow, so campaigns ship on evidence, not intuition. Each skill is a focused tool. The `/astack` router dispatches any task to the right one automatically.
 
 ---
 
 ## What you get
 
-**32 slash commands across 6 domains.**
+**44 slash commands across 7 domains.**
 
 ### Product pipeline
 
@@ -34,9 +34,26 @@ astack is a set of Claude Code slash commands that close those gaps. It covers t
 | `/secure-coding-practices` | Security posture check before any auth, API key, or access-control change |
 | `/red-green-tdd` | Strict TDD: failing test first, minimal pass, then refactor |
 | `/evaluate-approach` | Scores competing implementation approaches against tradeoffs before committing |
+| `/incremental-implementation` | Executes multi-file work in thin vertical slices — every increment working, tested, committable |
+| `/api-design` | Designs the API or interface contract before implementation — shapes, error semantics, evolution |
+| `/frontend-ui` | Component architecture, state discipline, and a non-negotiable accessibility baseline for UI work |
+| `/source-driven-dev` | Grounds framework and library usage in official docs for the pinned version, not memory |
+| `/context-engineering` | Curates what the agent sees — rules files, task grounding, session hygiene |
+| `/debug-triage` | Systematic root-cause debugging: reproduce → localize → reduce → fix → guard → verify |
+| `/browser-testing` | Verifies UI changes at runtime in a real browser — console, network, visual state |
+| `/code-simplify` | Reduces complexity with behaviour provably preserved — dead code, needless abstraction, duplication |
+| `/perf-optimization` | Measure-first performance work: baseline, fix the dominant cost, re-measure, guard |
 | `/pr-review` | Reviews code against the original spec and acceptance criteria — not just style |
 | `/context-sync` | Closes a dev cycle and updates the project's working memory with learnings |
 | `/meta-learn` | Synthesises patterns and learnings across multiple sessions or projects |
+
+### Ship & operate
+
+| Skill | What it does |
+| --- | --- |
+| `/git-workflow` | Branching, commit hygiene, history, and semantic versioning — how work gets recorded and released |
+| `/ship-launch` | Pre-launch checklist, staged rollout, and rollback plan — the gate before anything reaches real users |
+| `/observability` | Structured logging, metrics, tracing, and alerting — instrumented with the feature, not after the incident |
 
 ### Growth / GTM pipeline
 
@@ -90,7 +107,7 @@ Open Claude Code and run:
 git clone https://github.com/aakashagg123/astack.git ~/.claude/skills/astack
 ```
 
-All 32 slash commands are immediately available. No setup script. No config file. No dependencies.
+All 44 slash commands are immediately available. No setup script. No config file. No dependencies.
 
 ### Add to your project
 
