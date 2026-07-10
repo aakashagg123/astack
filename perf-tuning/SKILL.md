@@ -37,6 +37,9 @@ Before profiling, pin down:
 - Record the **baseline** — exact numbers, exact conditions — before changing anything.
 - Find the dominant cost. Optimizing anything below ~20% of total cost caps your best-case
   win below 20%; go after the biggest bar in the flame graph first.
+- The instrument only shows what's already measured. If production is slow but the profile is
+  blind to it, the missing telemetry is the first fix (`/telemetry-design`) — you can't tune a
+  cost you can't see.
 
 ---
 
@@ -62,7 +65,8 @@ aggressively with correct invalidation, reduce main-thread JS during interaction
 
 - Re-measure under the **same conditions** as the baseline. Report both numbers.
 - Confirm correctness didn't regress: full test suite green (a fast wrong answer is worse
-  than a slow right one).
+  than a slow right one). If a change makes something faster *and* a test starts failing,
+  that's not a tradeoff to accept — diagnose it through `/root-cause` before claiming the win.
 - Add a regression guard where practical: performance budget in CI, Lighthouse assertion,
   benchmark test, query-time alert.
 - If the change added complexity, record why in a comment tied to the number

@@ -77,6 +77,24 @@ Work through this on every interactive surface:
 
 ---
 
+## Anti-Patterns to Refuse
+
+- **The div that's secretly a button.** `onClick` on a `<div>` — invisible to keyboard and
+  screen reader. Use the real element.
+- **`outline: none` with no replacement.** Deletes the focus ring keyboard users navigate by.
+- **Derived state stored as state.** `itemCount` kept alongside `items` — two things that can
+  disagree. Compute it at render.
+- **The happy-path-only fetch.** Rendering data without modelling loading, error, and empty —
+  the blank screen on failure is a shipped bug, not an edge case.
+- **Prop-drilling laundered into a global store.** Reaching for global state to avoid passing
+  one prop two levels; the store becomes a junk drawer nobody can reason about.
+- **The one-off widget.** Rebuilding a button/input that the design system already provides
+  because the bespoke version looks marginally nicer in isolation.
+- **"I'll add accessibility later."** It never gets added, and retrofitting it costs more than
+  building it in. The baseline below is part of "done", not a follow-up.
+
+---
+
 ## Verification
 
 1. Suite green, plus tests for the component's states: default, loading, error, empty.

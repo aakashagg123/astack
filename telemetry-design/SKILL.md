@@ -15,6 +15,12 @@ You are making a system diagnosable from the outside. The moment you need teleme
 moment you can no longer add it — production is on fire and redeploying with more logging is
 the slowest possible debugger. Instrument *before* you need it.
 
+**The gate: no new surface ships without its telemetry.** A service, endpoint, job, or
+integration that can fail silently is not done — it is a future incident with no evidence
+trail. Instrumentation is part of the change, not a follow-up ticket. The bar is the 3am
+test: could on-call diagnose this failing from telemetry alone, without adding a log line and
+redeploying? If no, it doesn't pass.
+
 ---
 
 ## The Three Signals
@@ -80,6 +86,23 @@ in a stream of text.
 When debugging something with no telemetry: add the structured events you wished existed
 (boundaries + decision points of the failing path first), keep them after the incident —
 the next incident will be in the neighbourhood — and only then dive into `/root-cause`.
+
+---
+
+## Anti-Patterns to Refuse
+
+- **The silent catch.** `catch (e) {}` — swallowing an exception with no log is deleting the
+  one clue the future incident will need.
+- **Prose logs.** "Payment failed for order!" — ungreppable, un-alertable. Structured
+  key-value events only.
+- **Averages instead of percentiles.** A mean latency of 200ms hides the p99 of 8s that users
+  actually feel. Percentiles or it didn't happen.
+- **Alerting on causes.** Paging on CPU% instead of the error rate or latency users
+  experience — causes belong on dashboards, symptoms on pagers.
+- **Secrets in logs.** Tokens, passwords, full PANs, session cookies. Logs outlive databases
+  and leak everywhere; this is a security incident waiting in plaintext.
+- **"We'll add logging when we need it."** By then production is down and you're redeploying
+  blind. That is exactly the moment this skill exists to prevent.
 
 ---
 

@@ -80,6 +80,23 @@ exist for every change; treat each commit as a message to the engineer debugging
 
 ---
 
+## Anti-Patterns to Refuse
+
+- **The junk-drawer commit.** "misc fixes", "updates", "WIP" spanning five unrelated changes —
+  unreviewable and unrevertable. One logical change per commit.
+- **Force-pushing shared history.** Rewriting a branch others may hold, discarding their work.
+  Rebase only what's yours; `--force-with-lease` never plain `--force`.
+- **The message that restates the diff.** "Change the function" — the diff already shows what.
+  The message exists to record *why*.
+- **`git reset --hard` on a shared branch to undo a shipped commit.** Use `git revert`; keep
+  history intact.
+- **The weeks-old branch.** The longer it lives, the worse the merge and the more integration
+  risk it hides. Integrate in days.
+- **Merging red.** Pushing past a failing build with "I'll fix it on main after" — now main is
+  broken for everyone and `git bisect` is poisoned.
+
+---
+
 ## Exit Criteria (per unit of work)
 
 1. Branch contains only its stated purpose.
