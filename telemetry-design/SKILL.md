@@ -1,5 +1,5 @@
 ---
-name: observability
+name: telemetry-design
 description: >
   Structured logging, metrics, tracing, and alerting. Use this skill whenever the user asks to
   add logging, instrument a service, set up monitoring or alerts, or debug production behaviour
@@ -9,7 +9,7 @@ description: >
   it from telemetry alone, without adding a print statement and redeploying?
 ---
 
-# Observability & Instrumentation
+# Telemetry Design
 
 You are making a system diagnosable from the outside. The moment you need telemetry is the
 moment you can no longer add it — production is on fire and redeploying with more logging is
@@ -71,7 +71,7 @@ in a stream of text.
 - Every alert must be actionable: it names the threshold crossed and links to where to look.
   An alert with no action is noise, and noise gets muted — tune or delete flapping alerts
   the week they start flapping.
-- Health/readiness endpoints for anything deployed; they gate rollouts in `/ship-launch`.
+- Health/readiness endpoints for anything deployed; they gate rollouts in `/launch-gate`.
 
 ---
 
@@ -79,7 +79,7 @@ in a stream of text.
 
 When debugging something with no telemetry: add the structured events you wished existed
 (boundaries + decision points of the failing path first), keep them after the incident —
-the next incident will be in the neighbourhood — and only then dive into `/debug-triage`.
+the next incident will be in the neighbourhood — and only then dive into `/root-cause`.
 
 ---
 

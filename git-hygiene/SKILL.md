@@ -1,5 +1,5 @@
 ---
-name: git-workflow
+name: git-hygiene
 description: >
   Git discipline — branching, commit hygiene, history, and versioning. Use this skill whenever
   the user asks about branching strategy, commit messages, rebasing vs merging, release
@@ -9,7 +9,7 @@ description: >
   revertable unit with a message that explains why.
 ---
 
-# Git Workflow & Versioning
+# Git Hygiene & Versioning
 
 You are keeping version history useful. Git history is the only documentation guaranteed to
 exist for every change; treat each commit as a message to the engineer debugging this code at
@@ -23,7 +23,7 @@ exist for every change; treat each commit as a message to the engineer debugging
   longer it lives, the worse the merge — integrate within days, not weeks.
 - **One branch, one purpose.** Feature work, bug fix, and refactor each get their own branch.
 - Incomplete features are handled with flags and unexposed entry points
-  (see `/incremental-implementation`), not by parking branches for a month.
+  (see `/vertical-slicing`), not by parking branches for a month.
 - Name branches by intent: `fix/login-timeout`, `feat/export-csv` — a reader should know the
   point without opening the diff.
 - **Never rewrite shared history.** Rebase and amend freely on branches only you hold; the
@@ -65,8 +65,8 @@ exist for every change; treat each commit as a message to the engineer debugging
   PATCH = fixes. A breaking change in a minor version is a broken promise, not a version.
 - Tag releases (`v2.3.0`) so any production state can be reproduced exactly.
 - Keep a changelog entry per release written for the *consumer*: what changed for them, what
-  breaks, how to migrate. Coordinate the deprecation window with `/api-design`'s evolution
-  rules and the rollout with `/ship-launch`.
+  breaks, how to migrate. Coordinate the deprecation window with `/contract-design`'s evolution
+  rules and the rollout with `/launch-gate`.
 
 ---
 

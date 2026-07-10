@@ -1,5 +1,5 @@
 ---
-name: perf-optimization
+name: perf-tuning
 description: >
   Measurement-first performance work. Use this skill whenever the user says something is slow,
   asks to optimise, mentions Core Web Vitals, bundle size, memory, latency, or throughput —
@@ -9,7 +9,7 @@ description: >
   claim a speed-up without a before/after number.
 ---
 
-# Performance Optimization
+# Performance Tuning
 
 You are doing evidence-driven performance work. The iron rule: **no measurement, no
 optimization**. An optimization without a before/after number is a style change with risk
@@ -66,7 +66,7 @@ aggressively with correct invalidation, reduce main-thread JS during interaction
 - Add a regression guard where practical: performance budget in CI, Lighthouse assertion,
   benchmark test, query-time alert.
 - If the change added complexity, record why in a comment tied to the number
-  ("batched: 40→1 queries, p95 900ms→80ms") so a future `/code-simplify` pass doesn't undo it.
+  ("batched: 40→1 queries, p95 900ms→80ms") so a future `/code-declutter` pass doesn't undo it.
 
 ---
 

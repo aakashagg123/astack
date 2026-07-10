@@ -1,5 +1,5 @@
 ---
-name: code-simplify
+name: code-declutter
 description: >
   Complexity reduction with behaviour preserved. Use this skill whenever the user asks to
   simplify, clean up, refactor for readability, remove dead code, reduce duplication, or
@@ -10,7 +10,7 @@ description: >
   creating the behaviour lock is step one, not optional.
 ---
 
-# Code Simplify
+# Code Declutter
 
 You are reducing complexity while provably preserving behaviour. Simplification that changes
 behaviour is not simplification — it's an unreviewed feature change wearing a cleanup label.
@@ -63,11 +63,11 @@ Scan for these, in order of payoff:
 ## What NOT to Do
 
 - **Don't simplify hot paths blind.** If code looks contorted for performance, check for a
-  benchmark or comment first; measure before and after if you touch it (see `/perf-optimization`).
+  benchmark or comment first; measure before and after if you touch it (see `/perf-tuning`).
 - **Don't chase metrics.** Cyclomatic-complexity scores and line counts are hints, not goals.
   Optimise for the next reader's comprehension time.
 - **Don't "improve" behaviour.** Found a probable bug while simplifying? Record it, finish the
-  behaviour-preserving pass, then fix the bug separately through `/debug-triage`. One diff, one
+  behaviour-preserving pass, then fix the bug separately through `/root-cause`. One diff, one
   intent.
 - **Don't add cleverness.** A dense one-liner replacing five clear lines is compression, not
   simplification.

@@ -34,15 +34,15 @@ astack is a set of Claude Code slash commands that close those gaps. It covers t
 | `/secure-coding-practices` | Security posture check before any auth, API key, or access-control change |
 | `/red-green-tdd` | Strict TDD: failing test first, minimal pass, then refactor |
 | `/evaluate-approach` | Scores competing implementation approaches against tradeoffs before committing |
-| `/incremental-implementation` | Executes multi-file work in thin vertical slices — every increment working, tested, committable |
-| `/api-design` | Designs the API or interface contract before implementation — shapes, error semantics, evolution |
-| `/frontend-ui` | Component architecture, state discipline, and a non-negotiable accessibility baseline for UI work |
-| `/source-driven-dev` | Grounds framework and library usage in official docs for the pinned version, not memory |
-| `/context-engineering` | Curates what the agent sees — rules files, task grounding, session hygiene |
-| `/debug-triage` | Systematic root-cause debugging: reproduce → localize → reduce → fix → guard → verify |
-| `/browser-testing` | Verifies UI changes at runtime in a real browser — console, network, visual state |
-| `/code-simplify` | Reduces complexity with behaviour provably preserved — dead code, needless abstraction, duplication |
-| `/perf-optimization` | Measure-first performance work: baseline, fix the dominant cost, re-measure, guard |
+| `/vertical-slicing` | Executes multi-file work in thin vertical slices — every increment working, tested, committable |
+| `/contract-design` | Designs the API or interface contract before implementation — shapes, error semantics, evolution |
+| `/ui-discipline` | Component architecture, state discipline, and a non-negotiable accessibility baseline for UI work |
+| `/docs-grounding` | Grounds framework and library usage in official docs for the pinned version, not memory |
+| `/context-curation` | Curates what the agent sees — rules files, task grounding, session hygiene |
+| `/root-cause` | Root-cause debugging as a case to solve: evidence → diagnosis → cure → immunity |
+| `/browser-verify` | Verifies UI changes at runtime with Playwright — plan and manifest first, screenshot evidence into `Playwright/` |
+| `/code-declutter` | Reduces complexity with behaviour provably preserved — dead code, needless abstraction, duplication |
+| `/perf-tuning` | Measure-first performance work: baseline, fix the dominant cost, re-measure, guard |
 | `/pr-review` | Reviews code against the original spec and acceptance criteria — not just style |
 | `/context-sync` | Closes a dev cycle and updates the project's working memory with learnings |
 | `/meta-learn` | Synthesises patterns and learnings across multiple sessions or projects |
@@ -51,9 +51,9 @@ astack is a set of Claude Code slash commands that close those gaps. It covers t
 
 | Skill | What it does |
 | --- | --- |
-| `/git-workflow` | Branching, commit hygiene, history, and semantic versioning — how work gets recorded and released |
-| `/ship-launch` | Pre-launch checklist, staged rollout, and rollback plan — the gate before anything reaches real users |
-| `/observability` | Structured logging, metrics, tracing, and alerting — instrumented with the feature, not after the incident |
+| `/git-hygiene` | Branching, commit hygiene, history, and semantic versioning — how work gets recorded and released |
+| `/launch-gate` | Pre-launch checklist, staged rollout, and rollback plan — the gate before anything reaches real users |
+| `/telemetry-design` | Structured logging, metrics, tracing, and alerting — instrumented with the feature, not after the incident |
 
 ### Growth / GTM pipeline
 

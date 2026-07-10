@@ -39,15 +39,15 @@ You are a skill router. When invoked, identify the domain and task type from the
 | `/secure-coding-practices` | Security posture review — always run before auth, API key, or Supabase changes |
 | `/red-green-tdd` | Strict TDD execution (RED → GREEN → REFACTOR cycle) |
 | `/evaluate-approach` | Compare competing implementation approaches before committing |
-| `/incremental-implementation` | Execute multi-file work in thin vertical slices — every increment working, tested, committable |
-| `/api-design` | Contract-first API or interface design — before any new endpoint or breaking signature change |
-| `/frontend-ui` | Component architecture, state discipline, and accessibility for any UI work |
-| `/source-driven-dev` | Verify framework/library usage against official docs for the pinned version — never from memory |
-| `/context-engineering` | Curate what the agent sees — rules files, task grounding, session hygiene — before and during work |
-| `/debug-triage` | Systematic root-cause debugging when anything fails — reproduce → localize → fix cause → guard |
-| `/browser-testing` | Runtime verification of UI work in a real browser — console, network, visual state |
-| `/code-simplify` | Reduce complexity with behaviour provably preserved — dead code, needless abstraction, duplication |
-| `/perf-optimization` | Measure-first performance work — baseline, fix the dominant cost, re-measure, guard |
+| `/vertical-slicing` | Execute multi-file work in thin vertical slices — every increment working, tested, committable |
+| `/contract-design` | Contract-first API or interface design — before any new endpoint or breaking signature change |
+| `/ui-discipline` | Component architecture, state discipline, and accessibility for any UI work |
+| `/docs-grounding` | Verify framework/library usage against official docs for the pinned version — never from memory |
+| `/context-curation` | Curate what the agent sees — rules files, task grounding, session hygiene — before and during work |
+| `/root-cause` | Root-cause investigation when anything fails — evidence → diagnosis → cure → immunity |
+| `/browser-verify` | Runtime verification of UI work via Playwright — test plan + manifest first, screenshots into `Playwright/` |
+| `/code-declutter` | Reduce complexity with behaviour provably preserved — dead code, needless abstraction, duplication |
+| `/perf-tuning` | Measure-first performance work — baseline, fix the dominant cost, re-measure, guard |
 | `/pr-review` | Code review against PRD, stories, and acceptance criteria |
 | `/context-sync` | Close a dev cycle; update CLAUDE.md with learnings |
 | `/meta-learn` | Meta-learning synthesis across sessions or domains |
@@ -56,9 +56,9 @@ You are a skill router. When invoked, identify the domain and task type from the
 
 | Skill | When to invoke |
 |---|---|
-| `/git-workflow` | Branching, commit hygiene, history, and semantic versioning — how work gets recorded and released |
-| `/ship-launch` | Pre-launch checklist, staged rollout, rollback plan — the gate before anything reaches real users |
-| `/observability` | Structured logging, metrics, tracing, alerting — instrument with the feature, not after the incident |
+| `/git-hygiene` | Branching, commit hygiene, history, and semantic versioning — how work gets recorded and released |
+| `/launch-gate` | Pre-launch checklist, staged rollout, rollback plan — the gate before anything reaches real users |
+| `/telemetry-design` | Structured logging, metrics, tracing, alerting — instrument with the feature, not after the incident |
 
 ### Growth / GTM Pipeline
 
@@ -101,9 +101,9 @@ You are a skill router. When invoked, identify the domain and task type from the
 
 ## Routing Rules
 
-1. **Engineering pipeline routing.** Full end-to-end feature → `/10x-ai-engineer`. Single-file / known root cause → direct implementation. Multi-file build with a plan in hand → `/incremental-implementation`. Something broken with unknown cause → `/debug-triage`. UI change claimed done → `/browser-testing` before declaring it.
+1. **Engineering pipeline routing.** Full end-to-end feature → `/10x-ai-engineer`. Single-file / known root cause → direct implementation. Multi-file build with a plan in hand → `/vertical-slicing`. Something broken with unknown cause → `/root-cause`. UI change claimed done → `/browser-verify` before declaring it.
 
-2. **Ship & operate routing.** Ready to release, deploy, or flip a flag → `/ship-launch`. New service/endpoint going in → `/observability` alongside it. Commit/branch/version questions → `/git-workflow`.
+2. **Ship & operate routing.** Ready to release, deploy, or flip a flag → `/launch-gate`. New service/endpoint going in → `/telemetry-design` alongside it. Commit/branch/version questions → `/git-hygiene`.
 
 3. **Growth pipeline routing.** Strategy / audience / channel still open → `/growth-discovery` first. Have a strategy, need the brief → `/marketing-brief`. Have past performance data → `/campaign-insights`. Have an approved brief, need the journey → `/marketing-automation-builder`. The arc mirrors the build pipeline: discover → contract → data → artifact.
 

@@ -14,11 +14,11 @@
 
 **Cycle closure is not optional.** `/context-sync` closes every dev cycle by updating the project's working memory with what was learned. Patterns that worked, gotchas to avoid, decisions made. The next session starts from a richer context, not from scratch.
 
-**Root cause before patch.** When something breaks, `/debug-triage` stops the line: reproduce, localize, reduce, fix the cause, guard against recurrence. Making the error disappear is not the goal — understanding why it existed is. A fix you can't explain is a coincidence.
+**Root cause before patch.** When something breaks, `/root-cause` treats it as a case to solve — evidence, diagnosis, cure, immunity — and halts new work until the diagnosis holds. Making the error disappear is not the goal; understanding why it existed is. A fix you can't explain is a coincidence.
 
-**Evidence over recall, runtime over reading.** `/source-driven-dev` verifies framework and library usage against official docs for the version actually installed — memory of an API is a snapshot that started aging the day it was taken. `/browser-testing` holds the same line for UI: a change verified only by reading the diff is unverified. And `/perf-optimization` refuses any speed claim without a before/after number.
+**Evidence over recall, runtime over reading.** `/docs-grounding` verifies framework and library usage against official docs for the version actually installed — memory of an API is a snapshot that started aging the day it was taken. `/browser-verify` holds the same line for UI: a change verified only by reading the diff is unverified. And `/perf-tuning` refuses any speed claim without a before/after number.
 
-**Shipping should be boring.** `/ship-launch` gates every release on three properties: verified before exposure, observable during exposure, reversible at every stage. `/observability` makes systems diagnosable before the incident, not after. `/git-workflow` keeps the history a readable record of why. Excitement at deploy time is a process failure.
+**Shipping should be boring.** `/launch-gate` gates every release on three properties: verified before exposure, observable during exposure, reversible at every stage. `/telemetry-design` makes systems diagnosable before the incident, not after. `/git-hygiene` keeps the history a readable record of why. Excitement at deploy time is a process failure.
 
 ## Growth is a build cycle too
 

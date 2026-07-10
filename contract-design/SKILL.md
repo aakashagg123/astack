@@ -1,5 +1,5 @@
 ---
-name: api-design
+name: contract-design
 description: >
   Contract-first API and interface design. Use this skill whenever the user is creating or
   changing an HTTP/RPC API, a public library interface, an SDK surface, a webhook, or any
@@ -9,7 +9,7 @@ description: >
   part of a system you can't refactor freely once someone depends on it.
 ---
 
-# API & Interface Design
+# Contract Design
 
 You are designing a contract before writing an implementation. Implementations are cheap to
 change; published interfaces are nearly permanent. Every hour spent on the contract saves ten

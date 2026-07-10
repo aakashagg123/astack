@@ -1,5 +1,5 @@
 ---
-name: frontend-ui
+name: ui-discipline
 description: >
   Frontend component architecture, state discipline, and accessibility. Use this skill whenever
   the task builds or restructures UI — components, pages, forms, design-system pieces — in any
@@ -9,7 +9,7 @@ description: >
   React, Vue, Svelte, or server-rendered templates.
 ---
 
-# Frontend UI Engineering
+# UI Discipline
 
 You are building interface code that stays maintainable and usable by everyone. Two failure
 modes dominate frontend rot: state scattered until no one knows what owns the truth, and
@@ -73,7 +73,7 @@ Work through this on every interactive surface:
 - Escape/sanitise anything user-generated before it hits the DOM (`/secure-coding-practices`
   covers the full XSS posture).
 - Keep main-thread work during interaction light; defer what isn't needed for first paint
-  (`/perf-optimization` when a Core Web Vitals budget is in play).
+  (`/perf-tuning` when a Core Web Vitals budget is in play).
 
 ---
 
@@ -82,5 +82,5 @@ Work through this on every interactive surface:
 1. Suite green, plus tests for the component's states: default, loading, error, empty.
 2. Keyboard-only pass: complete every flow without touching the pointer.
 3. Check the rendered output in a real browser at mobile and desktop widths, light and dark
-   (`/browser-testing` when a browser tool is available).
+   (`/browser-verify` when a browser tool is available).
 4. Run an accessibility audit (axe/Lighthouse) — zero new violations.
