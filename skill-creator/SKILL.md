@@ -29,6 +29,20 @@ Then after the skill is done (but again, the order is flexible), you can also ru
 
 Cool? Cool.
 
+## Tooling in this repo
+
+This repo ships only this SKILL.md. The helper files named below are not present: `scripts/`, `agents/`, `eval-viewer/`, `assets/`, and `references/schemas.md`. Where the text names one, use the substitute. Do not search for the missing file.
+
+| Named later in this file | Substitute |
+|---|---|
+| `eval-viewer/generate_review.py`, `--static` | Show each test case's prompt and output in the conversation. Ask for feedback inline. Save it to `<workspace>/iteration-N/feedback.json` as `{"reviews":[{"run_id":"...","feedback":"..."}],"status":"complete"}`. |
+| `scripts.aggregate_benchmark` | Run a short script that computes pass rate, mean and standard deviation of tokens and seconds for each configuration. Write `benchmark.json` and `benchmark.md`. |
+| `agents/grader.md` | Grade inline. For each assertion write `{"text","passed","evidence"}` to `grading.json`. |
+| `agents/comparator.md`, `agents/analyzer.md` | Give two outputs, labelled A and B, to a fresh subagent. Ask which is better and why. Then explain the winner. |
+| `references/schemas.md` | Use the JSON shapes shown in this file. |
+| `assets/eval_review.html`, `scripts.run_loop` | Write 20 trigger queries. Review them with the user in the conversation. Test each by asking a fresh subagent which skill it would consult. Keep the description with the best held-out score. |
+| `scripts.package_skill` | Run `cd <skills-dir> && zip -r <name>.skill <name>/`. |
+
 ## Communicating with the user
 
 The skill creator is liable to be used by people across a wide range of familiarity with coding jargon. If you haven't heard (and how could you, it's only very recently that it started), there's a trend now where the power of Claude is inspiring plumbers to open up their terminals, parents and grandparents to google "how to install npm". On the other hand, the bulk of users are probably fairly computer-literate.
@@ -458,14 +472,8 @@ If you're in Cowork, the main things to know are:
 
 ## Reference files
 
-The agents/ directory contains instructions for specialized subagents. Read them when you need to spawn the relevant subagent.
+None are bundled in this repo. Use the substitutes in "Tooling in this repo" above.
 
-- `agents/grader.md` — How to evaluate assertions against outputs
-- `agents/comparator.md` — How to do blind A/B comparison between two outputs
-- `agents/analyzer.md` — How to analyze why one version beat another
-
-The references/ directory has additional documentation:
-- `references/schemas.md` — JSON structures for evals.json, grading.json, etc.
 
 ---
 
