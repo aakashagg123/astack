@@ -43,9 +43,10 @@ You are a skill router. When invoked, identify the domain and task type from the
 | `/contract-design` | Contract-first API or interface design — before any new endpoint or breaking signature change |
 | `/ui-discipline` | Component architecture, state discipline, and accessibility for any UI work |
 | `/docs-grounding` | Verify framework/library usage against official docs for the pinned version — never from memory |
+| `/claude-api` | Built-in skill (not in this repo) — Claude API / Anthropic SDK work: model IDs, caching, tool use, migrations. Invoke it; never answer from memory |
 | `/context-curation` | Curate what the agent sees — rules files, task grounding, session hygiene — before and during work |
 | `/root-cause` | Root-cause investigation when anything fails — evidence → diagnosis → cure → immunity |
-| `/browser-verify` | Runtime verification of UI work via Playwright — test plan + manifest first, screenshots into `Playwright/` |
+| `/browser-verify` | Runtime verification of UI work via Playwright (Chrome extension and built-in browser as optional alternates) — test plan + manifest first, screenshots into `Playwright/` |
 | `/code-declutter` | Reduce complexity with behaviour provably preserved — dead code, needless abstraction, duplication |
 | `/perf-tuning` | Measure-first performance work — baseline, fix the dominant cost, re-measure, guard |
 | `/pr-review` | Code review against PRD, stories, and acceptance criteria |
@@ -83,6 +84,8 @@ You are a skill router. When invoked, identify the domain and task type from the
 |---|---|
 | `/data-analysis` | Data analysis or visualisation from any structured dataset |
 | `/advanced-search` | Content search, file discovery, and shell pipelines across a codebase — three playbooks, loaded on demand |
+| `/dataviz` | Any chart, graph, dashboard, or stat tile — form choice, validated colour, marks, hover, accessibility |
+| `/deep-research` | Multi-source research synthesised into a report, via parallel research agents (needs the Agent tool) |
 
 ### Document & Artifact Generation
 
@@ -107,7 +110,7 @@ You are a skill router. When invoked, identify the domain and task type from the
 
 3. **Growth pipeline routing.** Strategy / audience / channel still open → `/growth-discovery` first. Have a strategy, need the brief → `/marketing-brief`. Have past performance data → `/campaign-insights`. Have an approved brief, need the journey → `/marketing-automation-builder`. The arc mirrors the build pipeline: discover → contract → data → artifact.
 
-4. **Research routing.** Structured data → `/data-analysis`. Codebase search, file finding, or multi-step shell work → `/advanced-search`.
+4. **Research routing.** Structured data → `/data-analysis`, then `/dataviz` for any chart. Multi-source questions that need a written report → `/deep-research`. Codebase search, file finding, or multi-step shell work → `/advanced-search`.
 
 5. **When ambiguous.** State the two best matches with one-line rationale each. Ask one question to resolve. Never guess silently.
 

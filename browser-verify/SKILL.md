@@ -27,6 +27,7 @@ leaves evidence behind: a plan, a manifest, and screenshots, all in the repo.
   project's definition of "how we test". Without one, drive Playwright directly with
   Chromium (in managed environments, point `executablePath` at the pre-installed browser
   rather than downloading).
+- Claude in Chrome and the built-in browser are optional alternates for deployed or staging targets, not for local dev servers. Read `references/alt-drivers.md` before using either.
 - If Playwright genuinely can't run here, **say so plainly**, verify what's verifiable
   (tests, build, SSR output), and hand the user the test plan from Step 1 as a manual
   checklist — never imply runtime verification happened when it didn't.
