@@ -91,3 +91,10 @@ aggressively with correct invalidation, reduce main-thread JS during interaction
 2. Target metric within budget, or an explicit statement of the remaining gap and next lever.
 3. Test suite green; behaviour unchanged.
 4. Regression guard in place, or an explicit note on why one isn't practical.
+
+
+---
+
+## Confidence
+
+Close every output with: `Confidence: X% — [basis]. [What would raise it.]`

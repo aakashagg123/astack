@@ -59,7 +59,7 @@ Ask all questions in one batch if any are missing from context:
 2. What artifacts are available? (PRD, user stories, ACs, tech plan — paste or summarise)
 3. What is the code diff or implementation? (paste inline or describe modules)
 4. What stack / framework is this in?
-5. Was `/secure-coding-practice` applied during generation? (Y/N — affects security
+5. Was `/secure-coding-practices` applied during generation? (Y/N — affects security
    review depth)
 6. Was `/red-green-tdd` applied? (Y/N — affects test coverage expectations)
 7. Are there known constraints to check against? (performance SLAs, regulatory, data

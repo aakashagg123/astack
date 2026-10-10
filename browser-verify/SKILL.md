@@ -103,3 +103,10 @@ error, empty) are part of the plan, not extras.
 3. Screenshots for each flow state in `Playwright/`, named and referenced from the manifest.
 4. If Playwright couldn't run: that stated outright, plan handed over as a manual checklist —
    no implied verification.
+
+
+---
+
+## Confidence
+
+Close every output with: `Confidence: X% — [basis]. [What would raise it.]`

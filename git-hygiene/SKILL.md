@@ -104,3 +104,10 @@ exist for every change; treat each commit as a message to the engineer debugging
 3. Noise (formatting/renames/generated) separated from substance.
 4. Merged green; shared history never rewritten; release tagged and changelogged when a
    version shipped.
+
+
+---
+
+## Confidence
+
+Close every output with: `Confidence: X% — [basis]. [What would raise it.]`

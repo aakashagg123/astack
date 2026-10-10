@@ -1,6 +1,7 @@
 ---
 name: spec-creator
-description: Create a comprehensive, implementation-ready specification document for anything you want to build — a feature, system, API, tool, flow, skill, process, or product. Use this skill when you need to turn a raw idea into a structured spec that engineers, designers, or AI coding agents can execute from. Trigger on: write a spec, create a spec, spec out this feature, spec this, I want to spec, detailed specification, spec document, spec for a feature, help me spec this out, I need a spec, build a spec, create a specification, write a specification, or any request to formally document what needs to be built before building it. Always invoke this skill before coding begins on a non-trivial piece of work. The spec is always saved as a Markdown file in a /specs folder (created automatically if missing). This skill merges PRD-level business clarity with user-story-level implementation detail into one artifact. Never skip the upfront Q&A — ask all clarifying questions in a single batch before writing anything.
+description: >-
+  Turn a raw idea into an implementation-ready spec — PRD-level business clarity plus user stories, acceptance criteria, and test cases in one Markdown file under /specs. Use before coding any non-trivial feature, API, system, flow, or tool, and when the user says "spec this", "write a spec", or "I need a specification". Asks all clarifying questions in one batch before writing. Do not use for small fixes with a known root cause.
 ---
 
 # Spec Creator — Skill Guide
@@ -661,3 +662,10 @@ Basis: [one sentence on what's solid vs. what's uncertain]
 ```
 
 If below 80%: list specifically which sections carry low confidence and why.
+
+
+---
+
+## Next skill
+
+After the spec is approved, run `/tech-development-plan` to sequence the build.

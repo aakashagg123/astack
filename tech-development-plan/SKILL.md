@@ -1,6 +1,7 @@
 ---
 name: tech-development-plan
-description: "Generates a comprehensive, executable technical development plan from a PRD and user stories. Use immediately after /prd-generator and /user-story-v2 have been run — or whenever a PM or tech lead provides a PRD, user stories, or acceptance criteria and needs a sequenced implementation blueprint. Trigger on: 'create a dev plan', 'build a tech plan', 'plan this feature', 'how do we implement this', 'sequence the implementation', 'give me a development plan', 'create implementation plan', '/tech-development-plan', or any request to translate requirements into an ordered engineering execution plan. Also trigger proactively after user stories are finalised in a conversation — the natural next step is always the technical plan. Output is editable markdown submitted for human approval before execution begins."
+description: >-
+  Turn an approved spec (or PRD plus user stories) into a sequenced technical development plan — architecture, phases, tasks, dependencies, risks, deployment — with a human approval gate before any code. Use after /spec-creator, or when the user supplies requirements and asks "plan this feature" or "how do we implement this". Do not use before requirements exist; run /problem-discovery and /spec-creator first.
 ---
 
 # Tech Development Plan — Skill Guide
@@ -18,9 +19,9 @@ Two modes:
 ## Position in workflow
 
 ```
-/prd-generator  →  /user-story-v2  →  /tech-development-plan  →  [APPROVAL GATE]
+/spec-creator  →  /tech-development-plan  →  [APPROVAL GATE]
                                                                         ↓
-                                              /secure-coding-practice + /red-green-tdd
+                                              /secure-coding-practices + /red-green-tdd
 ```
 
 This skill is the last step before execution. Nothing gets coded until this plan is
@@ -225,7 +226,7 @@ Work that spans all phases and is not owned by a single task.
 
 **Security implementation:**
 Map each security requirement from PRD/stories to a concrete implementation task.
-Reference `/secure-coding-practice` for execution.
+Reference `/secure-coding-practices` for execution.
 
 | Requirement | Implementation approach | Phase | Owner |
 |---|---|---|---|
@@ -235,7 +236,7 @@ Reference `/secure-coding-practice` for execution.
 | [regulatory ref] | [e.g., DPDP Act consent capture on new data fields] | Phase 1 | |
 
 **Test strategy:**
-Derived from story test cases (Section 5 of user-story-v2 output). Reference
+Derived from story test cases (the test-case section of the /spec-creator output). Reference
 `/red-green-tdd` for execution discipline.
 
 | Test type | Coverage target | Tooling | Owner |
@@ -351,7 +352,7 @@ This plan is ready for the approval gate when all items below are checked:
 > To approve: reply **"Plan approved — proceed to execution"**
 >
 > Execution begins only after explicit approval.
-> After approval, run `/secure-coding-practice` first, then `/red-green-tdd` inside that scaffold.
+> After approval, run `/secure-coding-practices` first, then `/red-green-tdd` inside that scaffold.
 
 ---
 
@@ -390,3 +391,9 @@ Basis: [one sentence — what's solid vs. uncertain]
 ```
 
 Below 80%: list which sections carry low confidence and what input would resolve it.
+
+---
+
+## Next skill
+
+After the user approves the plan, run `/secure-coding-practices` first, then `/red-green-tdd` inside that security scaffold.

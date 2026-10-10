@@ -1,33 +1,30 @@
 ---
 name: advanced-search
-description: >
-  Deep search router — delegates to the right search skill based on task type.
-  Use /advanced-search when you need to find content, files, or symbols across
-  a codebase or document set and aren't sure which search approach to use.
-  Invoke: /advanced-search <what you're looking for>
+description: Find and read things across a codebase or document set, and run multi-step shell work. Covers three jobs, each with its own playbook — content search (symbols, usages, JSON/CSV/YAML, large files), file discovery (by name, extension, recency, project layout), and shell execution (pipelines, builds, processes, Docker, migrations). Use when a task spans many files, the native Grep/Glob/Read tools truncate or return nothing, or a shell task needs more than a one-liner. Do not use for a single known file or a quick one-pattern check.
 ---
 
-# advanced-search — Search Router
+# Advanced Search
 
-You are a search router. When invoked, classify the search task and immediately delegate
-to the correct sub-skill via the Skill tool. Never search yourself — always delegate.
+One skill, three playbooks. Pick the job, then read only that reference.
 
----
-
-## Routing table
-
-| Task type | Signal | Delegate to |
+| Job | Signal | Read |
 |---|---|---|
-| Find content, text, or symbols inside files | "find where X is used", "grep for", "which files reference", "search for string" | `/advanced-grep` |
-| Find files by name, pattern, or project structure | "find files named", "list all .ts files", "where is the config", "map the project" | `/advanced-glob` |
-| Shell operations, build/test pipelines, process management | "run this command", "pipe this", "build and test", "start the server" | `/advanced-bash` |
+| Search inside files | "find where X is used", "which files reference", "search JSON/YAML/CSV", "read this large file" | `references/grep.md` |
+| Find files | "find files named", "list all .tsx", "where is the config", "what changed recently", "map the project" | `references/glob.md` |
+| Run shell work | "build and test", "kill the process on port", "docker compose", "run the migration", "chain these commands" | `references/bash.md` |
 
-## Routing rules
+## Procedure
 
-1. **Content search** (looking inside files) → `/advanced-grep`
-2. **File discovery** (finding files by name or pattern) → `/advanced-glob`
-3. **Shell execution** (commands, pipelines, build ops) → `/advanced-bash`
-4. **When ambiguous**: state the two best matches with one-line rationale each. Ask one question to resolve.
+1. Classify the job from the table.
+2. Read the one matching reference file. Do not read the other two.
+3. Follow its playbook.
+4. If the task needs two jobs, run them in order: find files, search inside them, then run commands.
+5. If two jobs could both fit, state both in one line each and ask one question.
 
-Invoke the matched skill immediately via the Skill tool. Do not ask for confirmation
-unless two skills could genuinely match.
+## Default rule
+
+Use the dedicated tool (`Read`, `Grep`, `Glob`) for a single file or a quick check. Use the playbook for scale, context lines, format-aware search, or when the native tool fails.
+
+## Confidence
+
+End substantial work with: `Confidence: X% — [what was covered]. [Gaps: ignored dirs, skipped binaries, unmapped aliases.]`

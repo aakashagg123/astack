@@ -35,7 +35,7 @@ You are a skill router. When invoked, identify the domain and task type from the
 | Skill | When to invoke |
 |---|---|
 | `/tech-development-plan` | Sequenced implementation plan from user stories |
-| `/10x-ai-engineer` | Full end-to-end feature pipeline: PRD → stories → plan → TDD → review → sync |
+| `/10x-ai-engineer` | Orchestrates the full feature pipeline by delegating to the skills below: preflight → spec → plan → security → TDD → review → sync |
 | `/secure-coding-practices` | Security posture review — always run before auth, API key, or Supabase changes |
 | `/red-green-tdd` | Strict TDD execution (RED → GREEN → REFACTOR cycle) |
 | `/evaluate-approach` | Compare competing implementation approaches before committing |
@@ -82,7 +82,7 @@ You are a skill router. When invoked, identify the domain and task type from the
 | Skill | When to invoke |
 |---|---|
 | `/data-analysis` | Data analysis or visualisation from any structured dataset |
-| `/advanced-search` | Deep codebase or document search spanning multiple locations |
+| `/advanced-search` | Content search, file discovery, and shell pipelines across a codebase — three playbooks, loaded on demand |
 
 ### Document & Artifact Generation
 
@@ -107,7 +107,7 @@ You are a skill router. When invoked, identify the domain and task type from the
 
 3. **Growth pipeline routing.** Strategy / audience / channel still open → `/growth-discovery` first. Have a strategy, need the brief → `/marketing-brief`. Have past performance data → `/campaign-insights`. Have an approved brief, need the journey → `/marketing-automation-builder`. The arc mirrors the build pipeline: discover → contract → data → artifact.
 
-4. **Research routing.** Structured data → `/data-analysis`. Codebase search → `/advanced-search`.
+4. **Research routing.** Structured data → `/data-analysis`. Codebase search, file finding, or multi-step shell work → `/advanced-search`.
 
 5. **When ambiguous.** State the two best matches with one-line rationale each. Ask one question to resolve. Never guess silently.
 

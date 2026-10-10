@@ -1,16 +1,7 @@
 ---
 name: secure-coding-practices
 description: >-
-  Enforce and audit secure coding practices across all software tasks. Use whenever
-  the user asks to review code for security, audit APIs or modules, write secure code, assess specs
-  for security gaps, or asks about authentication (OTP/MFA), session management, input validation,
-  access control, cryptography, error handling, logging, data protection, DB security, file handling,
-  or memory safety. Also trigger for fintech risks (CIBIL API, PAN/Aadhaar, bureau data, UPI,
-  OCEN/TReDS, RBI/DPDP Act), AI/LLM security (prompt injection, RAG leakage, model output
-  validation), and API security (JWT, OAuth 2.0, rate limiting, webhook validation). Trigger on
-  "security review", "OWASP", "pentest", "vulnerability", "compliance audit", "RBI audit", "DPDP",
-  or any backend logic, API endpoint, DB query, or LLM integration request. Proactively apply when
-  user data, credentials, sessions, or bureau calls are involved — don't wait to be asked.
+  Audit or enforce secure coding practices — input validation, authentication and sessions, access control, cryptography, error handling and logging, data protection, database and file handling, API security (JWT, OAuth, rate limits, webhooks), and AI/LLM risks (prompt injection, RAG leakage, output validation). Includes India fintech controls (PAN, Aadhaar, CIBIL bureau calls, UPI, RBI, DPDP). Use for security reviews and before auth, API, database, or LLM-integration changes. Apply proactively when user data, credentials, or sessions are involved.
 ---
 
 # Secure Coding Practices Skill
@@ -317,3 +308,9 @@ A structured security review and code generation skill based on OWASP-aligned se
 16. LLM API key committed to VCS or stored in env file (Critical)
 17. No webhook HMAC signature validation (High)
 18. RAG pipeline retrieving documents user has no access to (Critical)
+
+---
+
+## Confidence
+
+Close every output with: `Confidence: X% — [basis]. [What would raise it.]`

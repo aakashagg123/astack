@@ -98,3 +98,10 @@ is tested against (feed it to `/spec-creator` or `/red-green-tdd`).
 2. Conventions match the surrounding system.
 3. Evolution story stated (versioning/deprecation).
 4. Contract tests exist; implementation matches the document, not the other way around.
+
+
+---
+
+## Confidence
+
+Close every output with: `Confidence: X% — [basis]. [What would raise it.]`

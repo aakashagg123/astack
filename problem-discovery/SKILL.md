@@ -269,3 +269,10 @@ Invoke `/spec-creator` with this bundle. Tell the user: "Discovery complete — 
 - **Alternatives without referencing the Impact Map.** Options that look equivalent on implementation cost often have radically different blast radii. That difference belongs in the comparison.
 - **No rollback analysis.** For schema changes, API contracts, and state migrations — "can we undo this?" is an architectural constraint, not an afterthought.
 - **A verdict that hedges.** "Leans toward Alternative 2 but Alternative 1 is also viable" is not a verdict. Name one. State the decisive factor. The user decides, but they deserve a clear signal.
+
+
+---
+
+## Confidence
+
+Close every output with: `Confidence: X% — [basis]. [What would raise it.]`

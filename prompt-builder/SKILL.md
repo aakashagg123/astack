@@ -1,7 +1,7 @@
 ---
-name: "prompt-builder"
-description: >
-  Comprehensive prompt engineering skill — use whenever you need to build a prompt for a recurring workflow (product docs, decision frameworks, comp analysis, research, code specs, stakeholder comms, or scenario planning). Also trigger when you want to improve or audit an existing prompt, or when a task seems too broad/vague and needs structured prompt scaffolding before execution.
+name: prompt-builder
+description: >-
+  Build, improve, or audit a reusable prompt for a recurring workflow — product docs, decision frameworks, research, code specs, stakeholder comms, scenario planning. Use when the user says "build me a prompt" or "improve this prompt", or hands over a task so broad or vague that it needs structured prompt scaffolding before execution. Do not use for one-off questions.
 ---
 
 # Prompt Builder (v2)

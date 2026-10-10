@@ -98,3 +98,10 @@ The tell that a wall is breached: the diff touches a file the slice sentence doe
 2. All four contract clauses met — proven, naive-by-default, committed whole.
 3. Unfinished surface dark: flagged off or unwired.
 4. Sighting log captured; zero adjacent cleanup smuggled into the diff.
+
+
+---
+
+## Confidence
+
+Close every output with: `Confidence: X% — [basis]. [What would raise it.]`

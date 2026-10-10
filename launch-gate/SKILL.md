@@ -104,3 +104,10 @@ Passing the gate ends with observation, not assumption:
 3. Exposure widened stage by stage with metrics checked — or blast radius explicitly
    judged small enough to collapse stages.
 4. Production behaviour confirmed by observation; flag debt scheduled for removal.
+
+
+---
+
+## Confidence
+
+Close every output with: `Confidence: X% — [basis]. [What would raise it.]`

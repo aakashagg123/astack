@@ -254,3 +254,10 @@ Basis: [one sentence — what's solid vs. soft]
 ```
 
 Below 80%: name the sections carrying low confidence and why.
+
+
+---
+
+## Next skill
+
+With past campaign data, run `/campaign-insights` to produce a Brief Delta. With an approved brief, run `/marketing-automation-builder` to build the journey.

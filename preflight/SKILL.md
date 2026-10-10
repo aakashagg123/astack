@@ -1,6 +1,7 @@
 ---
 name: preflight
-description: "Validates environment before executing any task. Checks CLI tools (node, npm, python, aws, gh, etc.), API auth tokens, disk space, network connectivity, and env config — then writes preflight-report.md. Blocks execution if any check fails; proposes fixes and waits for approval. Trigger on: \"/preflight\", \"run preflight\", \"check my environment\", \"preflight check\", \"validate setup\", \"are we ready to\", \"check dependencies\". Also trigger proactively before deployments, migrations, pipelines, build scripts, or any task involving external APIs, S3, databases, or CLI tools — especially before /red-green-tdd, /secure-coding-practice, or deployment scripts. Trigger on execution-intent phrases: \"deploy to prod\", \"run the migration\", \"kick off the build\", \"run the script\". Never proceed optimistically past a failed check."
+description: >-
+  Validate the environment before a task runs — CLI tools, auth tokens, disk space, network, env config — and write preflight-report.md. Blocks on any failed check and proposes fixes. Use before deployments, migrations, pipelines, builds, or work that touches external APIs, S3, or databases, and when the user says "run preflight" or "check my environment".
 ---
 
 # Preflight — Skill Guide

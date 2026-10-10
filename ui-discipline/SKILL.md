@@ -102,3 +102,10 @@ Work through this on every interactive surface:
 3. Check the rendered output in a real browser at mobile and desktop widths, light and dark
    (`/browser-verify` when a browser tool is available).
 4. Run an accessibility audit (axe/Lighthouse) — zero new violations.
+
+
+---
+
+## Confidence
+
+Close every output with: `Confidence: X% — [basis]. [What would raise it.]`

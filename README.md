@@ -12,7 +12,7 @@ astack is a set of Claude Code slash commands that close those gaps. It covers t
 
 ## What you get
 
-**44 slash commands across 7 domains.**
+**41 slash commands across 7 domains.**
 
 ### Product pipeline
 
@@ -76,10 +76,7 @@ astack is a set of Claude Code slash commands that close those gaps. It covers t
 | Skill | What it does |
 | --- | --- |
 | `/data-analysis` | Analyses and visualises structured datasets |
-| `/advanced-search` | Routes search tasks to the right underlying tool |
-| `/advanced-grep` | Multi-file content search, symbol correlation, and format-aware search |
-| `/advanced-glob` | File discovery by name, pattern, and project structure |
-| `/advanced-bash` | Complex shell pipelines, build/test/lint, process management |
+| `/advanced-search` | Content search, file discovery, and shell execution — one skill, three playbooks |
 
 ### Document and artifact tools
 
@@ -107,7 +104,7 @@ Open Claude Code and run:
 git clone https://github.com/aakashagg123/astack.git ~/.claude/skills/astack
 ```
 
-All 44 slash commands are immediately available. No setup script. No config file. No dependencies.
+All 41 slash commands are immediately available. No setup script. No config file. No dependencies.
 
 ### Add to your project
 

@@ -125,3 +125,10 @@ Produce a single structured markdown report:
 - **Complexity is a cost.** A new abstraction is never free. Prefer the boring solution unless there's a concrete reason not to.
 - **Don't solve the next problem.** Evaluate for the stated ask, not for hypothetical future requirements.
 - **Surface locked decisions.** If an architectural decision was already made (in a spec, CLAUDE.md, or existing code), name it explicitly — don't pretend the option is open.
+
+
+---
+
+## Confidence
+
+Close every output with: `Confidence: X% — [basis]. [What would raise it.]`

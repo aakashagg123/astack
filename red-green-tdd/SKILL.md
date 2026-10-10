@@ -184,3 +184,16 @@ If the user says any of the following, invoke this full workflow:
 - `"red green"`
 
 These are not style preferences. They are workflow invocations. Honour them fully.
+
+---
+
+## Confidence
+
+Close every output with: `Confidence: X% — [basis]. [What would raise it.]`
+
+
+---
+
+## Next skill
+
+When the full suite is green, run `/pr-review` against the spec and acceptance criteria.

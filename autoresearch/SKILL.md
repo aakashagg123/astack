@@ -1,6 +1,7 @@
 ---
 name: autoresearch
-description: Autonomously optimize an existing Codex skill by benchmarking it across representative prompts, scoring outputs with binary evals, mutating the skill one change at a time, and keeping only improvements. Use when Codex needs to improve a skill, run repeated evals on a skill, benchmark prompt instructions, or produce a mutation log and dashboard for skill quality.
+description: >-
+  Optimize an existing skill by benchmarking it on representative prompts, scoring outputs with binary evals, mutating one change at a time, and keeping only improvements. Produces a mutation log and dashboard. Use when the user wants to improve a skill, run repeated evals, or benchmark prompt instructions. To create a skill from scratch use /skill-creator. To rank which skills to optimize use /meta-learn.
 ---
 
 # Autoresearch
@@ -261,3 +262,17 @@ Use this pattern as a model:
 8. Stop after the score plateaus and document the remaining edge cases.
 
 The point is not to run many experiments. The point is to run disciplined experiments that produce a defensible improvement trail.
+
+
+---
+
+## Confidence
+
+Close every output with: `Confidence: X% — [basis]. [What would raise it.]`
+
+
+---
+
+## Next skill
+
+Apply the winning version after review. To pick which skill to optimize next, run `/meta-learn scan`.

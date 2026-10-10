@@ -114,3 +114,10 @@ the next incident will be in the neighbourhood — and only then dive into `/roo
 3. Golden-signal metrics exist for new surfaces; alerts (if any) are symptom-based and
    actionable.
 4. Instrumentation shipped in the same change as the feature — not filed as "later".
+
+
+---
+
+## Confidence
+
+Close every output with: `Confidence: X% — [basis]. [What would raise it.]`

@@ -102,3 +102,10 @@ Conversation is the one layer that quietly degrades. Manage it:
    "just in case".
 3. Open decisions posed as explicit questions.
 4. Long-running work checkpointed in writing at each phase boundary.
+
+
+---
+
+## Confidence
+
+Close every output with: `Confidence: X% — [basis]. [What would raise it.]`

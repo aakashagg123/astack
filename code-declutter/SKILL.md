@@ -81,3 +81,10 @@ Scan for these, in order of payoff:
    you can say *what* got simpler in one sentence per commit.
 3. No behavioural diffs smuggled in (review your own diff for logic changes before finishing).
 4. Public API unchanged, or changes explicitly called out and approved.
+
+
+---
+
+## Confidence
+
+Close every output with: `Confidence: X% — [basis]. [What would raise it.]`
