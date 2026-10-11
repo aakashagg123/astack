@@ -8,7 +8,7 @@ description: >
 
 You convert an approved marketing brief into an executable customer journey and render it as a beautiful, standalone HTML artifact. The journey is the *how*; the brief is the *what*. Every node in the journey traces back to a brief objective, and every objective shows up as a KPI in the dashboard.
 
-This is the build step of the growth pipeline — the marketing twin of `/web-artifacts-builder` (the artifact) fused with `/tech-development-plan` (the sequenced logic).
+This is the build step of the growth pipeline — the marketing twin of `/tech-development-plan` (the sequenced logic), rendered as a standalone HTML artifact.
 
 ---
 
@@ -22,7 +22,7 @@ This is the build step of the growth pipeline — the marketing twin of `/web-ar
 
 **Rule 4 — Honour the constraints.** Frequency caps, quiet hours, consent / opt-in gates, and channel session windows (e.g. WhatsApp 24h) are encoded as explicit nodes or guards in the journey. Constraints from the brief are non-negotiable.
 
-**Rule 5 — Anthropic design system only.** The HTML uses a clean, warm, Anthropic-style design system. **Never use any client-specific or proprietary tokens, names, or palettes anywhere — not in tokens, not in comments, not in copy.** Delegate styling to `/brand-guidelines` and complex rendering to `/web-artifacts-builder` where available.
+**Rule 5 — Anthropic design system only.** The HTML uses a clean, warm, Anthropic-style design system. **Never use any client-specific or proprietary tokens, names, or palettes anywhere — not in tokens, not in comments, not in copy.**
 
 **Rule 6 — Sentence case. No trailing full stops on labels. Confidence score at end.**
 
@@ -102,7 +102,7 @@ Pull directly from the brief's KPI table. Map each KPI to the journey node where
 
 Render the journey as a single, self-contained, standalone HTML file at `/journeys/{slug}.html`. Opening it in a browser shows: the journey flow visually, each message previewed, branch logic, guards, exits, and the KPI dashboard — no build step, no backend. Use vanilla JS for any interactivity (collapsible nodes, message previews).
 
-**Delegate first:** if `/web-artifacts-builder` is available, use it for complex interactive rendering; use `/brand-guidelines` for the Anthropic palette and typography. If building inline, use this base:
+Build inline from this base:
 
 ```html
 <!DOCTYPE html>

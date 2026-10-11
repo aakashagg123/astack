@@ -173,7 +173,7 @@ How each KPI is instrumented: events, funnels, attribution window, holdout/contr
 
 After saving the markdown, generate a standalone, print-ready HTML brief at `/briefs/{slug}.html`. This is a designed document, not a markdown dump. Use a clean, professional, Anthropic-style design system — **never any client-specific or proprietary tokens**.
 
-Delegate styling to `/brand-guidelines` (Anthropic colours and typography) and structural rendering to `/web-artifacts-builder` when available. If building inline, use this token base in `<head>`:
+Build the HTML inline, using this token base in `<head>`:
 
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">

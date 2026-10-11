@@ -63,7 +63,7 @@ Use answer 6 to pick the entry layer from the map below.
 | 4B | TDD implementation | `/red-green-tdd` | Full suite green, every TC-N covered |
 | 5 | PR review | `/pr-review` | SHIP verdict required |
 | 6A | Context sync | `/context-sync` | User confirms applied diffs |
-| 6B | Skill improvement (optional) | `/skill-creator` | Only if a layer underperformed |
+| 6B | Skill improvement (optional) | `/autoresearch` | Only if a layer underperformed |
 
 ---
 

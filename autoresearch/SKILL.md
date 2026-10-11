@@ -1,7 +1,7 @@
 ---
 name: autoresearch
 description: >-
-  Optimize an existing skill by benchmarking it on representative prompts, scoring outputs with binary evals, mutating one change at a time, and keeping only improvements. Produces a mutation log and dashboard. Use when the user wants to improve a skill, run repeated evals, or benchmark prompt instructions. To create a skill from scratch use /skill-creator. To rank which skills to optimize use /meta-learn.
+  Optimize an existing skill by benchmarking it on representative prompts, scoring outputs with binary evals, mutating one change at a time, and keeping only improvements. Produces a mutation log and dashboard. Use when the user wants to improve a skill, run repeated evals, or benchmark prompt instructions. To rank which skills to optimize use /meta-learn.
 ---
 
 # Autoresearch

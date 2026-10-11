@@ -12,7 +12,7 @@ astack is a set of Claude Code slash commands that close those gaps. It covers t
 
 ## What you get
 
-**43 slash commands across 7 domains.**
+**34 slash commands across 6 domains.**
 
 ### Product pipeline
 
@@ -24,7 +24,6 @@ astack is a set of Claude Code slash commands that close those gaps. It covers t
 | `/prompt-builder` | Engineers a reusable, cold-hand-test-passing prompt from a vague brief |
 | `/spec-creator` | Produces a complete spec with acceptance criteria, decisions register, and 1:1 test cases |
 | `/user-story-v2` | Writes or reviews a structured user story with one test case per scenario |
-| `/doc-coauthoring` | Co-authors structured documents — PRDs, RFCs, design docs |
 
 ### Engineering pipeline
 
@@ -70,7 +69,6 @@ astack is a set of Claude Code slash commands that close those gaps. It covers t
 
 | Skill | What it does |
 | --- | --- |
-| `/skill-creator` | Creates, edits, or improves any SKILL.md in the stack |
 | `/autoresearch` | Benchmarks a skill against real tasks and improves it through evaluation loops |
 
 ### Research and search
@@ -80,17 +78,6 @@ astack is a set of Claude Code slash commands that close those gaps. It covers t
 | `/data-analysis` | Analyses and visualises structured datasets |
 | `/advanced-search` | Content search, file discovery, and shell execution — one skill, three playbooks |
 
-### Document and artifact tools
-
-| Skill | What it does |
-| --- | --- |
-| `/pdf` | PDF reading, extraction, and analysis |
-| `/xlsx` | Spreadsheet input and analysis |
-| `/pptx` | PowerPoint file tasks |
-| `/docx` | Word document tasks |
-| `/web-artifacts-builder` | Builds multi-component HTML/CSS/JS artifacts |
-| `/mcp-builder` | Creates or improves an MCP server |
-| `/brand-guidelines` | Applies Anthropic brand colours and typography to any artifact |
 
 ---
 
@@ -106,7 +93,7 @@ Open Claude Code and run:
 git clone https://github.com/aakashagg123/astack.git ~/.claude/skills/astack
 ```
 
-All 43 slash commands are immediately available. No setup script. No config file. No dependencies.
+All 34 slash commands are immediately available. No setup script. No config file. No dependencies.
 
 ### Add to your project
 

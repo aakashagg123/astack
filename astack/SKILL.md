@@ -2,7 +2,7 @@
 name: astack
 description: >
   astack — the routing hub across all custom skills.
-  Domains: software engineering pipelines, growth / go-to-market pipelines, research, AI, and document generation.
+  Domains: software engineering pipelines, growth / go-to-market pipelines, research, and AI.
   Invoke /astack <task-description> to route to the right skill, or
   /astack list to see the full skill map by domain.
   Use /astack when unsure which skill applies, or when starting a new initiative
@@ -29,7 +29,6 @@ You are a skill router. When invoked, identify the domain and task type from the
 | `/prompt-builder` | Sharpen a feature brief before PRD or spec work begins |
 | `/spec-creator` | Create a technical spec from a brief |
 | `/user-story-v2` | Structured user story with a 1:1 test case per scenario — lighter than a full spec |
-| `/doc-coauthoring` | Co-author structured documents — PRD, RFC, design doc |
 
 ### Engineering Pipeline
 
@@ -75,7 +74,6 @@ You are a skill router. When invoked, identify the domain and task type from the
 
 | Skill | When to invoke |
 |---|---|
-| `/skill-creator` | Create, edit, or improve any SKILL.md in the stack |
 | `/autoresearch` | Benchmark and optimize a skill via eval loops |
 | `/astack` | Route to the right skill; or `list` to see this map |
 
@@ -86,18 +84,6 @@ You are a skill router. When invoked, identify the domain and task type from the
 | `/data-analysis` | Data analysis or visualisation from any structured dataset |
 | `/advanced-search` | Content search, file discovery, and shell pipelines across a codebase — three playbooks, loaded on demand |
 
-### Document & Artifact Generation
-
-| Skill | When to invoke |
-|---|---|
-| `/pdf` | PDF reading, extraction, or analysis |
-| `/xlsx` | Spreadsheet input or analysis |
-| `/pptx` | PowerPoint file tasks |
-| `/docx` | Word document tasks |
-| `/web-artifacts-builder` | Multi-component claude.ai artifacts (HTML/CSS/JS) |
-| `/doc-coauthoring` | Co-author structured documents — PRD, RFC, design doc |
-| `/mcp-builder` | Create or improve an MCP server |
-| `/brand-guidelines` | Apply Anthropic brand colours and typography |
 
 ---
 
@@ -113,4 +99,4 @@ You are a skill router. When invoked, identify the domain and task type from the
 
 5. **When ambiguous.** State the two best matches with one-line rationale each. Ask one question to resolve. Never guess silently.
 
-6. **Stack management.** Creating or improving any skill → `/skill-creator` first, then mirror to both path locations (see CLAUDE.md skill deployment rule).
+6. **Stack management.** Improving an existing skill → `/autoresearch`. Choosing which skill to improve next → `/meta-learn`.
