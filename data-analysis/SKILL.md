@@ -97,7 +97,7 @@ One-page summary at `analysis/REPORT.md`:
 - **What we would do next** — one recommended action.
 - **Confidence: X%** — and what would raise it.
 
-For richer output, produce a self-contained HTML artifact using `/web-artifacts-builder` or the `dataviz` skill for chart discipline.
+For richer output, produce a self-contained HTML artifact using `/web-artifacts-builder`.
 
 ---
 
