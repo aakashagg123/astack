@@ -28,6 +28,7 @@ You are a skill router. When invoked, identify the domain and task type from the
 | `/problem-discovery` | Structured problem framing before any spec or code — mandatory when solution space is open |
 | `/prompt-builder` | Sharpen a feature brief before PRD or spec work begins |
 | `/spec-creator` | Create a technical spec from a brief |
+| `/user-story-v2` | Structured user story with a 1:1 test case per scenario — lighter than a full spec |
 | `/doc-coauthoring` | Co-author structured documents — PRD, RFC, design doc |
 
 ### Engineering Pipeline
@@ -43,6 +44,7 @@ You are a skill router. When invoked, identify the domain and task type from the
 | `/contract-design` | Contract-first API or interface design — before any new endpoint or breaking signature change |
 | `/ui-discipline` | Component architecture, state discipline, and accessibility for any UI work |
 | `/docs-grounding` | Verify framework/library usage against official docs for the pinned version — never from memory |
+| `/typesafe-ai` | Add typed semantic judgments (routing, scoring, extraction, reranking) to an app via the TypeSafe API; reads live docs first |
 | `/context-curation` | Curate what the agent sees — rules files, task grounding, session hygiene — before and during work |
 | `/root-cause` | Root-cause investigation when anything fails — evidence → diagnosis → cure → immunity |
 | `/browser-verify` | Runtime verification of UI work via Playwright — test plan + manifest first, screenshots into `Playwright/` |

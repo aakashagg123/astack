@@ -12,7 +12,7 @@ astack is a set of Claude Code slash commands that close those gaps. It covers t
 
 ## What you get
 
-**41 slash commands across 7 domains.**
+**43 slash commands across 7 domains.**
 
 ### Product pipeline
 
@@ -23,6 +23,7 @@ astack is a set of Claude Code slash commands that close those gaps. It covers t
 | `/preflight` | Validates that the environment is ready before any non-trivial task begins |
 | `/prompt-builder` | Engineers a reusable, cold-hand-test-passing prompt from a vague brief |
 | `/spec-creator` | Produces a complete spec with acceptance criteria, decisions register, and 1:1 test cases |
+| `/user-story-v2` | Writes or reviews a structured user story with one test case per scenario |
 | `/doc-coauthoring` | Co-authors structured documents — PRDs, RFCs, design docs |
 
 ### Engineering pipeline
@@ -38,6 +39,7 @@ astack is a set of Claude Code slash commands that close those gaps. It covers t
 | `/contract-design` | Designs the API or interface contract before implementation — shapes, error semantics, evolution |
 | `/ui-discipline` | Component architecture, state discipline, and a non-negotiable accessibility baseline for UI work |
 | `/docs-grounding` | Grounds framework and library usage in official docs for the pinned version, not memory |
+| `/typesafe-ai` | Builds typed semantic judgments into an app using TypeSafe's System One models |
 | `/context-curation` | Curates what the agent sees — rules files, task grounding, session hygiene |
 | `/root-cause` | Root-cause debugging as a case to solve: evidence → diagnosis → cure → immunity |
 | `/browser-verify` | Verifies UI changes at runtime with Playwright — plan and manifest first, screenshot evidence into `Playwright/` |
@@ -104,7 +106,7 @@ Open Claude Code and run:
 git clone https://github.com/aakashagg123/astack.git ~/.claude/skills/astack
 ```
 
-All 41 slash commands are immediately available. No setup script. No config file. No dependencies.
+All 43 slash commands are immediately available. No setup script. No config file. No dependencies.
 
 ### Add to your project
 
